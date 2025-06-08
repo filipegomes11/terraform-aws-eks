@@ -1,5 +1,5 @@
 resource "aws_iam_role" "eks_cluster_role" {
-  name = "eks_role"
+  name = "${var.cluster_name}-eks-role"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -14,7 +14,7 @@ resource "aws_iam_role" "eks_cluster_role" {
     ]
   })
 
-  tags = merge(local.tags, { Name = "eks-role" })
+  tags = merge(local.tags, { name = "${var.cluster_name}-eks-role" })
 }
 
 resource "aws_iam_role_policy_attachment" "attachment_eks_role_policy" {
