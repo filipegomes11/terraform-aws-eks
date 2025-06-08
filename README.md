@@ -1,5 +1,3 @@
-## Terraform EKS Module
-
 <!-- BEGIN_TF_DOCS -->
 
 
@@ -65,10 +63,7 @@ variable "cluster_name" {
 | public\_subnets | public subnet to create the cluster | `list(string)` | n/a | yes |
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| eks\_oidc | n/a |
-| eks\_vpc\_output | n/a |
+No outputs.
 ## Providers
 
 | Name | Version |
@@ -77,7 +72,10 @@ variable "cluster_name" {
 | tls | 4.1.0 |
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| terraform | >= 1.3.0 |
+| aws | >= 4.0 |
 ## Resources
 
 | Name | Type |
