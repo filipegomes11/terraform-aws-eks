@@ -1,0 +1,39 @@
+formatter: "markdown table"
+version: "0.20.0"
+recursive:
+  enabled: false
+content: |-
+  {{ .Header }}
+
+  ## Example
+  
+  ```hcl
+  {{ include "examples/example.tf" }}
+  ```
+  {{ .Inputs }}
+  {{ .Outputs }}
+  {{ .Providers }}
+  {{ .Requirements }}
+  {{ .Resources }}
+  {{ .Footer }}
+output:
+  file: "README.md"
+  mode: "replace"
+  template: |-
+    <!-- BEGIN_TF_DOCS -->
+    {{ .Content }}
+    <!-- END_TF_DOCS -->
+settings:
+  anchor: false # Enable anchor links
+  color: true # Enable colorized output
+  default: true # Show default values
+  description: true # Show descriptions
+  escape: true # Escape special characters
+  hide-empty: false # Show sections even if they are empty
+  html: true # Enable HTML formatting
+  indent: 2 # Specify the indentation level
+  lockfile: true # Include lockfile information
+  read-comments: true # Include comments from the Terraform code
+  required: true # Show required status
+  sensitive: true # Show sensitive status
+  type: true # Show variable types
