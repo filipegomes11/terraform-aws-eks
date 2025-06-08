@@ -76,6 +76,7 @@ No outputs.
 |------|---------|
 | terraform | >= 1.3.0 |
 | aws | >= 4.0 |
+| tls | >= 4.0 |
 ## Resources
 
 | Name | Type |
