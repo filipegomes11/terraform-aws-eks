@@ -1,5 +1,3 @@
-## Terraform EKS Module
-[![Terraform Registry](https://img.shields.io/badge/Terraform-Registry-5C4EE5?logo=terraform&style=for-the-badge)](https://registry.terraform.io/modules/filipegomes11/eks/aws)
 <!-- BEGIN_TF_DOCS -->
 
 
@@ -65,7 +63,12 @@ variable "cluster_name" {
 | public\_subnets | public subnet to create the cluster | `list(string)` | n/a | yes |
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| certificate\_authority | The CA of the eks cluster |
+| cluster\_name | The name of the EKS Cluster |
+| eks\_oidc | The OIDC value of the cluster |
+| endpoint | The endpoint of the EKS Cluster |
 ## Providers
 
 | Name | Version |
